@@ -1,0 +1,29 @@
+﻿<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="22" fill="#0D1B2A" />
+  
+  {/* Briefcase handle */}
+  <path d="M 38 18 C 38 10, 62 10, 62 18 L 62 26 L 38 26 Z" fill="#00A8FF" />
+  <rect x="42" y="16" width="16" height="8" rx="2" fill="#0D1B2A" />
+
+  {/* Briefcase main body */}
+  <rect x="16" y="26" width="68" height="52" rx="10" fill="#00A8FF" />
+
+  {/* Checkmark */}
+  <path
+    d="M 22 50 L 42 68 L 90 20"
+    stroke="#0D1B2A"
+    stroke-width="12"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 22 50 L 42 68 L 90 20"
+    stroke="#00A8FF"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  {/* Swoosh tail */}
+  <path d="M 76 26 Q 86 14 96 6" stroke="#00A8FF" stroke-width="5" stroke-linecap="round" />
+</svg>
