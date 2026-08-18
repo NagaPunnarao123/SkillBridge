@@ -24,6 +24,9 @@ const io = new Server(server, {
     methods: ['GET', 'POST']
   }
 });
+app.get("/", (req, res) => {
+  res.send("SkillBridge Backend is running successfully 🚀");
+});
 
 // Middleware
 app.use(cors({ origin: CLIENT_URL }));
