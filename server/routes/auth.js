@@ -45,7 +45,11 @@ router.post('/register', [
       portfolio: portfolio || ''
     });
 
+    
     await user.save();
+
+console.log("USER SAVED:", user.email);
+console.log("DATABASE:", mongoose.connection.name);
 
     const payload = { id: user.id, role: user.role, name: user.name };
     const token = jwt.sign(payload, process.env.JWT_SECRET || 'secret', { expiresIn: '7d' });
