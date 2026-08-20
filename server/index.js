@@ -62,9 +62,13 @@ io.on('connection', (socket) => {
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/skillbridge';
 
-mongoose.connect(MONGO_URI)
-  .then(() => {
-    console.log('Connected to MongoDB');
-    server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-  })
-  .catch((err) => console.error('MongoDB connection error:', err));
+mongoose.connect(MONGO_URI, {
+  dbName: 'SkillBridge'
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+  console.log('Database name:', mongoose.connection.name);
+})
+.catch((err) => {
+  console.error('MongoDB connection error:', err);
+});
